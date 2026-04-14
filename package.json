@@ -1,0 +1,60 @@
+{
+  "name": "@basicrum/beacon-client",
+  "author": {
+    "name": "Basicrum"
+  },
+  "version": "0.1.1",
+  "description": "Client-side Real User Monitoring beacon for BasicRUM",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.mts"
+    },
+    "./react": {
+      "import": "./dist/react.mjs",
+      "types": "./dist/react.d.mts"
+    }
+  },
+  "files": [
+    "dist",
+    "asset",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "generate": "node scripts/generate-boomerang-source.mjs",
+    "build": "pnpm generate && tsdown",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "tsdown": "^0.16.8",
+    "typescript": "^5.6.2",
+    "vitest": "^4.1.4"
+  },
+  "boomerang": {
+    "version": "1.815.60",
+    "commit": "564759ed70de7801bb64de5e2025fb6ac049ff5f",
+    "repo": "https://github.com/basicrum/boomerang",
+    "flavor": "cutting-edge"
+  },
+  "keywords": [
+    "rum",
+    "real-user-monitoring",
+    "performance",
+    "boomerang",
+    "beacon",
+    "web-vitals"
+  ],
+  "license": "ISC"
+}
