@@ -1,6 +1,6 @@
 # @basicrum/beacon-client
 
-Client-side Real User Monitoring (RUM) beacon for [BasicRUM](https://github.com/basicrum/basicrum). Ships a pre-built [Boomerang](https://github.com/basicrum/boomerang) library (BasicRUM's fork of [akamai/boomerang](https://github.com/akamai/boomerang)) and provides a simple API to start collecting performance data with zero configuration.
+Client-side Real User Monitoring (RUM) beacon for [Basicrum](https://github.com/basicrum/basicrum). Ships a pre-built [Boomerang](https://github.com/basicrum/boomerang) library (Basicrum's fork of [akamai/boomerang](https://github.com/akamai/boomerang)) and provides a simple API to start collecting performance data with zero configuration.
 
 ## Installation
 
@@ -91,7 +91,7 @@ The bundled `boomerang.min.js` is built from the [basicrum/boomerang](https://gi
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| `beaconUrl` | `string` | **required** | URL where beacons are sent to your BasicRUM backend |
+| `beaconUrl` | `string` | **required** | URL where beacons are sent to your Basicrum backend |
 | `siteId` | `string` | **required** | Unique identifier for your site |
 | `resourceTiming` | `boolean` | `true` | Collect ResourceTiming data (scripts, images, etc.) |
 | `scriptUrl` | `string` | `undefined` | Load Boomerang from this URL instead of using the bundled version |
@@ -155,7 +155,7 @@ If Boomerang is already loaded on the page (e.g., by a tag manager), `initBasicR
 
 ### `initBasicRum(config: BasicRumConfig): Promise<void>`
 
-Initializes BasicRUM beacon monitoring. Loads the Boomerang library (inline or from URL) and configures it.
+Initializes Basicrum beacon monitoring. Loads the Boomerang library (inline or from URL) and configures it.
 
 - **SSR-safe**: Returns immediately on the server (no `window` access).
 - **Idempotent**: If BOOMR is already loaded, it configures without re-loading.

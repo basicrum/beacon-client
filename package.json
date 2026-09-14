@@ -4,7 +4,7 @@
     "name": "Basicrum"
   },
   "version": "0.1.1",
-  "description": "Client-side Real User Monitoring beacon for BasicRUM",
+  "description": "Client-side Real User Monitoring beacon for Basicrum",
   "type": "module",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",

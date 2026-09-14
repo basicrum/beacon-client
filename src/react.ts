@@ -6,7 +6,7 @@ import type { BasicRumConfig } from "./types";
 export type { BasicRumConfig } from "./types";
 
 /**
- * React component that initializes BasicRUM beacon monitoring.
+ * React component that initializes Basicrum beacon monitoring.
  *
  * Place this component in your root layout or `_app` to start
  * collecting Real User Monitoring data. The component renders nothing

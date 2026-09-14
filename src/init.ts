@@ -1,7 +1,7 @@
 import { boomerangSource } from "./generated/boomerang-source";
 import type { BasicRumConfig } from "./types";
 
-const LOG_PREFIX = "[BasicRUM]";
+const LOG_PREFIX = "[Basicrum]";
 
 interface BoomerangInstance {
 	init(config: BoomerangInitConfig): void;
@@ -21,7 +21,7 @@ declare global {
 		BOOMR?: BoomerangInstance;
 		/**
 		 * Configuration object read by the `basic-rum-init-config` plugin
-		 * bundled in the BasicRUM fork of Boomerang. When set before the
+		 * bundled in the Basicrum fork of Boomerang. When set before the
 		 * Boomerang script executes, the plugin automatically calls
 		 * `BOOMR.init()` with this config.
 		 */
@@ -44,7 +44,7 @@ function buildBoomerangConfig(config: BasicRumConfig): BoomerangInitConfig {
 
 /**
  * Returns a self-contained inline script string that loads Boomerang and
- * initializes BasicRUM. Useful for Next.js `beforeInteractive` `<Script>` tags
+ * initializes Basicrum. Useful for Next.js `beforeInteractive` `<Script>` tags
  * or any scenario where you need to inject the full setup as raw HTML.
  *
  * Sets `window.basicRumBoomerangConfig` before loading Boomerang so the
@@ -82,7 +82,7 @@ export function getInlineScript(config: BasicRumConfig): string {
 }
 
 /**
- * Configures an already-loaded BOOMR instance with the given BasicRUM config.
+ * Configures an already-loaded BOOMR instance with the given Basicrum config.
  * Used when BOOMR is already present (e.g. loaded by a tag manager) and the
  * `basic-rum-init-config` plugin has already run without a config.
  */
@@ -95,13 +95,13 @@ function configureBoomr(config: BasicRumConfig): void {
 }
 
 /**
- * Initialize BasicRUM beacon monitoring.
+ * Initialize Basicrum beacon monitoring.
  *
  * Loads the Boomerang RUM library and configures it to send performance
  * beacons to the specified URL. By default, the bundled Boomerang script
  * is injected inline — no additional file hosting required.
  *
- * Uses the `basic-rum-init-config` plugin built into the BasicRUM fork of
+ * Uses the `basic-rum-init-config` plugin built into the Basicrum fork of
  * Boomerang: sets `window.basicRumBoomerangConfig` before injecting the
  * script, so Boomerang auto-initializes on load.
  *

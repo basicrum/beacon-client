@@ -1,5 +1,5 @@
 /**
- * Configuration options for BasicRUM beacon initialization.
+ * Configuration options for Basicrum beacon initialization.
  *
  * @example
  * ```ts
@@ -11,7 +11,7 @@
  */
 export interface BasicRumConfig {
 	/**
-	 * URL where beacons will be sent to the BasicRUM backend.
+	 * URL where beacons will be sent to the Basicrum backend.
 	 *
 	 * @example "https://beacon.example.com/beacon"
 	 */
@@ -19,7 +19,7 @@ export interface BasicRumConfig {
 
 	/**
 	 * Unique identifier for your site. Used to distinguish beacons
-	 * from different websites in the BasicRUM dashboard.
+	 * from different websites in the Basicrum dashboard.
 	 *
 	 * @example "my_website_1"
 	 */
