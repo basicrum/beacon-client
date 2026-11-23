@@ -1,13 +1,29 @@
 {
-	"root": false,
-	"extends": [
-		"../../biome.json"
-	],
+	"$schema": "https://biomejs.dev/schemas/2.4.10/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	},
 	"files": {
-		"includes": [
-			"src/**",
-			"!dist",
-			"!asset"
-		]
+		"includes": ["src/**"]
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true,
+		"defaultBranch": "origin/main"
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		}
 	}
 }
